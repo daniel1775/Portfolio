@@ -1,4 +1,21 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300&family=Roboto:wght@100&display=swap');
+
+html{
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root{
+  --gray: #1C1919;
+  --green: #165520;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +53,4 @@
     transform: rotate(360deg);
   }
 }
+ */
