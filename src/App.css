@@ -15,6 +15,18 @@ body{
   --green: #165520;
 }
 
+@media (min-width:1000px){
+  .about, .skills{
+    width: 90vw;
+    display: flex;
+  }
+
+  .skills{
+    justify-content: flex-end;
+  }
+}
+
+
 /* .App {
   text-align: center;
 }
