@@ -6,6 +6,8 @@ import Header from './views/Header/Header';
 import About from './views/About/About';
 import Skills from './views/Skills/Skills';
 import Projects from './views/Projects/Projects'
+import Contact  from './views/Contact/Contact';
+import Footer from './views/Footer/Footer';
 
 function App() {
   const [ language, setLanguage ] = useState(false);
@@ -27,7 +29,8 @@ function App() {
         <Skills />
       </div>
       <Projects />
-
+      <Contact />
+      <Footer />
     </div>
   );
 }
