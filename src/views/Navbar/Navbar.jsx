@@ -10,7 +10,7 @@ export default function Navbar(props) {
   const [ showMenu, setShowMenu ] = useState(false);
 
   return(
-    <nav className={style.container}>
+    <nav className={`${style.container} ${darkMode ? style.container_dark : style.container_light}`}>
       <div className={style.nav}>
         <img className={style.logo} src={`${darkMode ? logo_light : logo_dark}`} alt="" />
         <div className={style.nav_menu__mode}>
@@ -22,7 +22,7 @@ export default function Navbar(props) {
       </div>
       <ul className={`${style.items} 
         ${showMenu ? style.items_show : style.items_hide}
-        ${darkMode ? style.items_light : style.items_dark}
+        ${darkMode ? style.items_dark : style.items_light}
         `}>
         <li className={style.items_about}><a className="nav__active" href="#about">ABOUT</a></li>
         <li className={style.items_skills}><a href="#skills">SKILLS</a></li>

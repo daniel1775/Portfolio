@@ -6,7 +6,7 @@ export default function Header(props) {
 
 	return (
 		<header className={`${style.header} ${darkMode ? style.header_black : style.header_light}`}>
-      <div className={style.titles}>
+      <div className={`${style.titles} ${darkMode ? style.titles_light : style.titles_dark}`}>
         <h1>Hi, I am</h1>
         <h1 className={style.titles_name}>Daniel Nieto</h1>
         <h2>Full stack - developer</h2>

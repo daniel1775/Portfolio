@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import './App.css';
 
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './views/Navbar/Navbar';
 import Header from './views/Header/Header';
 import About from './views/About/About';
 import Skills from './views/Skills/Skills';
 import Projects from './views/Projects/Projects'
 import Contact  from './views/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import Footer from './views/Footer/Footer';
 
-import Mode from './components/Navbar/components/Mode/Mode';
+// contains the dark mode and language buttons
+import Mode from './views/Navbar/components/Mode/Mode';
 
 function App() {
   const [ language, setLanguage ] = useState(false);

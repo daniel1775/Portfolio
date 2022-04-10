@@ -1,15 +1,9 @@
 
-import { useEffect } from 'react';
-
 import style from './Mode.module.css';
 import { HiOutlineSun, HiMoon } from 'react-icons/hi';
 
 export default function Mode(props){
   const { language, setLanguage, darkMode, setDarkMode } = props;
-
-  useEffect(() => {
-    console.log("DARKMODE: "+ darkMode);
-  }, [darkMode])
 
   return(
     <div className={style.mode}>
