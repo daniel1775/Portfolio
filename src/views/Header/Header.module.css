@@ -3,11 +3,20 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: black;
-	background: linear-gradient(153deg, var(--gray) 45%, black 0%);
 	flex-wrap: wrap;
   color: white;
   padding: 0 5% 0 5%;
+	transition: all 0.4s ease-in;
+}
+
+.header_black{
+	background-color: red;
+	background: linear-gradient(153deg, var(--gray) 45%, black 0%);
+}
+
+.header_light{
+	background-color: black;
+	background: linear-gradient(153deg, rgb(1, 194, 1) 45%, white 0%);
 }
 
 .titles{

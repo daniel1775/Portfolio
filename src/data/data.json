@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Bioshock landing page",
-    "image": "../../../../img/bioshock.png",
+    "image": "../../../../assets/img/bioshock.png",
     "description": "Desgin and development of a landing page about the videogame Bioshock",
     "tags": [
       "HTML",
@@ -15,7 +15,7 @@
   {
     "id": 2,
     "title": "Verduras Milena",
-    "image": "../../../../img/verduras.png",
+    "image": "../../../../assets/img/bioshock.png",
     "description": "design and development of a domicile application for a client in Plaza Paloquemao",
     "tags": [
       "HTML",

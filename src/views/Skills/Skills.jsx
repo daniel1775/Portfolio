@@ -1,13 +1,13 @@
 import style from './Skills.module.css';
 
-import css_icon from '../../img/css-icon.svg';
-import figma_icon from '../../img/figma-icon.svg';
-import git_icon from '../../img/git-icon.svg';
-import github_icon from '../../img/github-icon.svg';
-import html_icon from '../../img/html-icon.svg';
-import js_icon from '../../img/js-icon.svg';
-import mongo_icon from '../../img/mongo-icon.svg';
-import react_icon from '../../img/react-icon.svg';
+import css_icon from '../../assets/img/css-icon.svg';
+import figma_icon from '../../assets/img/figma-icon.svg';
+import git_icon from '../../assets/img/git-icon.svg';
+import github_icon from '../../assets/img/github-icon.svg';
+import html_icon from '../../assets/img/html-icon.svg';
+import js_icon from '../../assets/img/js-icon.svg';
+import mongo_icon from '../../assets/img/mongo-icon.svg';
+import react_icon from '../../assets/img/react-icon.svg';
 
 export default function Skills(){
   return(

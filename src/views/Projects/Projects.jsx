@@ -4,8 +4,8 @@ import Card from './components/Card/Card';
 import data from '../../data/data.json';
 
 import style from './Projects.module.css';
-import bioshock from '../../img/bioshock.png';
-import verduras from '../../img/verduras.PNG';
+import bioshock from '../../assets/img/bioshock.png';
+import verduras from '../../assets/img/verduras.PNG';
 
 export default function Projects(){
   let images = [bioshock, verduras];

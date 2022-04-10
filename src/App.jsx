@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import './App.css';
 
-import NavBar from './views/NavBar/NavBar';
+import Navbar from './components/Navbar/Navbar';
 import Header from './views/Header/Header';
 import About from './views/About/About';
 import Skills from './views/Skills/Skills';
 import Projects from './views/Projects/Projects'
 import Contact  from './views/Contact/Contact';
-import Footer from './views/Footer/Footer';
+import Footer from './components/Footer/Footer';
+
+import Mode from './components/Navbar/components/Mode/Mode';
 
 function App() {
   const [ language, setLanguage ] = useState(false);
@@ -15,13 +17,20 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar 
-        language={language}
-        setLanguage={setLanguage}
+      <Navbar
         darkMode={darkMode}
-        setDarkMode={setDarkMode}
+        mode={
+          <Mode
+            language={language}
+            setLanguage={setLanguage}
+            darkMode={darkMode}
+            setDarkMode={setDarkMode}
+          />}
       />
-      <Header />
+      <Header
+        language={language}
+        darkMode={darkMode}
+      />
       <div className='about'>
         <About />
       </div>

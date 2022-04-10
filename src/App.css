@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
 
 html{
   font-size: 100%;
@@ -8,23 +13,18 @@ html{
 body{
   background-color: black;
   font-family: 'Roboto', sans-serif;
+  
 }
 
 :root{
   --gray: #1C1919;
   --green: #165520;
+  --gray-light: #D5D8D4;
+  --gray-white: #EBEBEB;
+  --black-font: #1F1F1F;
+  --transition: 0.4s all ease;
 }
 
-@media (min-width:1000px){
-  .about, .skills{
-    width: 90vw;
-    display: flex;
-  }
-
-  .skills{
-    justify-content: flex-end;
-  }
-}
 
 
 /* .App {

@@ -13,7 +13,14 @@ export default function About() {
 				UX design. I try to stay at the frontend of technology, learn new
 				technologies to implement in my work.
 			</p>
-      <button className={style.about_button}>Download CV</button>
+      <button className={style.about_button} >
+				<a 
+					href="https://drive.google.com/drive/u/0/folders/1D2DRSU7k7C7e6YCPQEovC0O-G0Ba3hg4"
+					target="_blank" rel="noreferrer"
+				>
+					Download CV
+				</a>
+			</button>
 		</div>
 	);
 }
