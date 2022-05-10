@@ -1,8 +1,10 @@
 import style from './About.module.css';
 
-export default function About() {
+export default function About(props) {
+ 	const { darkMode, language} = props;
+
 	return (
-		<div className={style.about}>
+		<section className={`${style.about} ${darkMode ? style.about_dark : style.about_light}`}>
 			<h2 className={style.about_title}>
 				ABOUT ME
 				<hr />
@@ -21,6 +23,6 @@ export default function About() {
 					Download CV
 				</a>
 			</button>
-		</div>
+		</section>
 	);
 }

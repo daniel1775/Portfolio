@@ -13,7 +13,6 @@ html{
 body{
   background-color: black;
   font-family: 'Roboto', sans-serif;
-  
 }
 
 :root{
@@ -25,7 +24,14 @@ body{
   --transition: 0.4s all ease;
 }
 
+.seccion_about_skills{
+  display: flex;
+  flex-direction: column-reverse;
+}
 
+@media (min-width:1024px){
+  
+}
 
 /* .App {
   text-align: center;

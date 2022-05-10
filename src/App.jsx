@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import style from './App.module.css';
 
 import Navbar from './views/Navbar/Navbar';
 import Header from './views/Header/Header';
@@ -17,7 +17,7 @@ function App() {
   const [ darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className="App">
+    <div className={style.App}>
       <Navbar
         darkMode={darkMode}
         mode={
@@ -32,11 +32,15 @@ function App() {
         language={language}
         darkMode={darkMode}
       />
-      <div className='about'>
-        <About />
-      </div>
-      <div className='skills'>
-        <Skills />
+      <div className={style.seccion_about_skills}>
+        <Skills
+          language={language}
+          darkMode={darkMode}
+        />
+        <About 
+          language={language}
+          darkMode={darkMode}
+        />
       </div>
       <Projects />
       <Contact />
