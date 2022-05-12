@@ -22,11 +22,11 @@ export default function Mode(props){
       </button>
       <div className={`${style.icons_line} ${darkMode ? style.line_light : style.line_dark}`}> | </div>
       <button 
-          className={`${style.button_language} ${darkMode ? style.light_mode : style.dark_mode}`} 
-          onClick={() => setLanguage(!language)}
-        >
-          {language ? "ES" : "EN"}
-        </button>
+        className={`${style.button_language} ${darkMode ? style.light_mode : style.dark_mode}`} 
+        onClick={() => setLanguage(!language)}
+      >
+        {language ? "ES" : "EN"}
+      </button>
     </div>
   );
 }

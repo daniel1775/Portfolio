@@ -1,3 +1,41 @@
-.skills{
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
+  width: 100%;
+  font-size: calc(1rem + 6px);
+  text-align: center;
+  margin-top: 20%;
+  position: relative;
+  overflow: hidden;
 }
+
+.skills_title {
+  width: 65%;
+  margin-bottom: 50px;
+}
+
+.slider_container {
+  display: flex;
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.panel_arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+

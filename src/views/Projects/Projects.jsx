@@ -18,7 +18,7 @@ export default function Projects(){
       </h2>
       <div className={style.cards}>
         {data.map(element => (
-          <Card 
+          <Card
             key={element.id}
             image={images[element.id-1]}
             title={element.title}

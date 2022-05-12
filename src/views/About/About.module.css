@@ -1,11 +1,14 @@
 .about{
   display: flex;
   flex-direction: column;
-  padding: 0 7% 0 7%;
+  align-items: center;
+  box-sizing: border-box;
   padding-top: 30%;
   font-weight: 400;
   transition: var(--transition);
   font-size: calc(1rem + 6px);
+  text-align: center;
+  width: 100%;
 }
 
 .about_light{
@@ -19,7 +22,7 @@
 }
 
 .about_title{
-  width: 80%;
+  width: 65%;
   margin-bottom: 50px;
 }
 
@@ -29,7 +32,7 @@
 
 .about_text{
   line-height: 2rem;
-  width: 95%;
+  width: 80%;
 }
 
 .about_button{
