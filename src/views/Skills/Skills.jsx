@@ -17,32 +17,34 @@ import { useRef } from 'react';
 
 export default function Skills(){
   const slideShow = useRef(null);
-
+  
   function previous() {
     const slideSize = slideShow.current.children[0].offsetWidth;
     const firstElement = slideShow.current.children[0];
 
-    if(slideShow.current.children.length > 0){
-      slideShow.current.style.transform = `translate(${0}px)`;
-    }
+    const lastElement = slideShow.current.children[slideShow.current.children.length-1];
+    slideShow.current.insertBefore(lastElement, firstElement);
+    
   }
-
+  
   function next() {
     const slideSize = slideShow.current.children[0].offsetWidth;
+    const firstElement = slideShow.current.children[0];
     
     if(slideShow.current.children.length > 0){
       slideShow.current.style.transform = `translate(-${slideSize}px)`;
+      slideShow.current.style.transition = `all .3s ease-in-out`;
     }
+
+    function transitionFirstElement(){
+      slideShow.current.style.transition = 'none';
+      slideShow.current.style.transform = `translateX(0)`;
+  
+      slideShow.current.appendChild(firstElement);
+    }
+
+    slideShow.current.addEventListener('transitionend', transitionFirstElement);
   }
-
-  function transitionFirstElement(){
-    slideShow.current.style.transition = 'none';
-    slideShow.current.style.transform = `translateX(0)`;
-  }
-
-  console.log(slideShow.current);
-
-  //slideShow.current.addEventListener('transitionend');
 
   const data = [
     {
