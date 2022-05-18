@@ -9,6 +9,7 @@
   margin-top: 20%;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
 .skills_title {

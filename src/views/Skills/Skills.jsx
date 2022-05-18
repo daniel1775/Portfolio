@@ -21,10 +21,16 @@ export default function Skills(){
   function previous() {
     const slideSize = slideShow.current.children[0].offsetWidth;
     const firstElement = slideShow.current.children[0];
-
     const lastElement = slideShow.current.children[slideShow.current.children.length-1];
+
     slideShow.current.insertBefore(lastElement, firstElement);
-    
+    slideShow.current.style.transition = `none`;
+    slideShow.current.style.transform = `translateX(-${slideSize}px)`;
+
+    setTimeout(() => {
+      slideShow.current.style.transition = `300ms ease-out all`;
+      slideShow.current.style.transform = `translateX(0)`;
+    }, 30);
   }
   
   function next() {
@@ -32,7 +38,7 @@ export default function Skills(){
     const firstElement = slideShow.current.children[0];
     
     if(slideShow.current.children.length > 0){
-      slideShow.current.style.transform = `translate(-${slideSize}px)`;
+      slideShow.current.style.transform = `translateX(-${slideSize}px)`;
       slideShow.current.style.transition = `all .3s ease-in-out`;
     }
 
@@ -41,6 +47,7 @@ export default function Skills(){
       slideShow.current.style.transform = `translateX(0)`;
   
       slideShow.current.appendChild(firstElement);
+      slideShow.current.removeEventListener('transitionend', transitionFirstElement);
     }
 
     slideShow.current.addEventListener('transitionend', transitionFirstElement);
