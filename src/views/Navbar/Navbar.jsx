@@ -5,7 +5,7 @@ import logo_light from '../../assets/img/raccoon_logo.png';
 import logo_dark from '../../assets/img/raccoon_logo_dark.png';
 import style from './Navbar.module.css';
 
-export default function Navbar(props) {
+export default function Navbar( props ) {
   const { mode, darkMode } = props;
   const [ showMenu, setShowMenu ] = useState(false);
 

@@ -12,6 +12,22 @@
   z-index: 0;
 }
 
+.skills_light {
+  color: var(--black-font);
+}
+
+.skills_dark {
+  color: white;
+}
+
+.skills_light button {
+  color: var(--black-font);
+}
+
+.skills_dark button {
+  color: white;
+}
+
 .skills_title {
   width: 65%;
   margin-bottom: 50px;
@@ -39,3 +55,28 @@
   transition: all .3s ease-in-out;
 }
 
+@media (min-width:1024px) {
+  .skills {
+    margin: 20px 0 0 0;
+    width: 25%;
+    height: 100%;
+  }
+
+  .skills_title {
+    font-size: calc(2rem + 8px);
+  }
+
+  .skills_title hr{
+    display: none;
+  }
+
+  .button {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1440px) {
+  .skills {
+    padding-right: 80px;
+  }
+}

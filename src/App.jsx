@@ -32,7 +32,7 @@ function App() {
         language={language}
         darkMode={darkMode}
       />
-      <div className={style.seccion_about_skills}>
+      <div className={`${style.section_about_skills} ${darkMode ? style.section_dark : style.section_light}`}>
         <Skills
           language={language}
           darkMode={darkMode}

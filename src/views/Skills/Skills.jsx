@@ -15,7 +15,8 @@ import { HiOutlineChevronRight } from "react-icons/hi";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 import { useRef } from 'react';
 
-export default function Skills(){
+export default function Skills( props ){
+  const { language, darkMode } = props;
   const slideShow = useRef(null);
   
   function previous() {
@@ -89,7 +90,7 @@ export default function Skills(){
   ];
 
   return(
-    <section className={style.skills}>
+    <section className={`${style.skills} ${darkMode ? style.skills_dark : style.skills_light}`}>
       <h2 className={style.skills_title}>
         MY SKILLS
         <hr />
