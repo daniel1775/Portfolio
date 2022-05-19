@@ -39,10 +39,14 @@ body {
 }
 
 @media (min-width:1024px){
+  body {
+    
+  }
+
   .section_about_skills {
     width: 100%;
     flex-direction: row-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 

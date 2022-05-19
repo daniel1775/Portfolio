@@ -1,4 +1,4 @@
-import style from './Card.module.css';
+import style from './CardProject.module.css';
 
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 
