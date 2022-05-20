@@ -59,6 +59,8 @@
   .skills {
     margin: 20px 0 0 0;
     width: 25%;
+    padding: 0;
+    margin-left: calc(var(--padding-desktop) + 100px);
     height: 100%;
   }
 
