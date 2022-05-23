@@ -41,7 +41,7 @@ body {
 
 @media (min-width:1024px) {
   .section_about_skills {
-    padding-top: 60px;
+    padding: 60px 0 130px 0;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;

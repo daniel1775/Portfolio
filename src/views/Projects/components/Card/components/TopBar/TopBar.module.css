@@ -1,0 +1,22 @@
+.TopBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3E3D3D;
+  height: 15%;
+  width: 100%;
+  font-size: calc(1rem - 3px);
+  font-style: italic;
+}
+
+.circles_container {
+  display: flex;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: white;
+}

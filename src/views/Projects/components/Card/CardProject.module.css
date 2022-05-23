@@ -1,90 +1,31 @@
-.card{
+.card {
   max-width: 90%;
+  height: 200px;
   background-color: black;
-  margin: 20px 0 20px 0;
+  border-radius: 4px;
+  margin: 15px 0;
+  overflow: hidden;
+  position: relative;
+  font-size: 1rem;
+}
+
+.hover_container {
+  box-sizing: border-box;
+  background-color: black;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  height: 85%;
+}
+
+.card img {
   border-radius: 10px;
-  padding: 10px;
+  height: 100%;
+  width: 100%;
 }
 
-.card img{
-  width: 90vw;
-  height: 50vW;
-  border-radius: 10px;
-}
-
-.card_info{
-  font-size: 1.3rem;
-  margin-bottom: 10%;
-}
-
-.card_developed_skills{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-
-.card_developed_main{
-  max-width: 60%;
-  text-align: center;
-}
-
-.card_developed{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 0.8rem;
-}
-
-.card_developed_title{
-  margin-bottom: 10px;
-}
-
-.card_developed div{
-  border-radius: 2px;
-  margin-left: 10px;
-  margin-top: 10px;
-  background-color: var(--green);
-}
-
-.card_links{
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.card_links a{
-  color: white;
-  font-size: 1.8rem;
-  margin-right: 15px;
-}
-
-@media (min-width:1000px){
-  .card{
-    max-width: 35vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card img{
-    width: 98%;
-    height: 20vw;
-    border-radius: 10px;
-  }
-
-  .card_info{
-    margin-left: 3%;
-  }
-
-  .card_developed_skills{
-    display: flex;
-    width: 100%;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .card_developed div{
-    font-size: 1rem;
-    padding: 3px;
-  }
+@media (min-width:1000px) {
+  
 }
