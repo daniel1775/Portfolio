@@ -2,29 +2,39 @@ import style from './CardProject.module.css';
 
 import TopBar from './components/TopBar/TopBar';
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
+import { AiOutlinePlusCircle as MoreIcon } from "react-icons/ai";
+import { useState } from 'react';
 
 export default function Card( props ){
+  const [ showDescription, setShowDescription ] = useState(false);
   const { image, title, description, tags, github, deploy } = props;
 
   return(
     <div className={style.card}>
       <TopBar title={title}/>
-      <img src={image} alt={title} />
+      <img className={style.bg} src={image} alt={title} />
       
-      <div className={style.hover_container}>
-        <p>{description}</p>
-        <div className={style.card_developed_skills}>
-          <div className={style.card_developed_main}>
-            <div className={style.card_developed_title}>Developed</div> 
-            <div className={style.card_developed}>
+      <button className={style.button_more}>
+        <MoreIcon />
+      </button>
+      
+      <div className={`${style.description_container} ${showDescription ? style.description_show : style.description_hide}`}>
+        <p className={style.description_text}>{description}</p>
+
+
+        <div className={style.developed}>
+          <div className={style.tags_container}>
+            <div className={style.tags_title}>Developed</div> 
+            <div className={style.tags_technologies}>
               {tags.map(element => <div>{element}</div>)}
             </div>
           </div>
-          <div className={style.card_links}>
-            <a href={deploy} target="_blank" rel="noreferrer">
+
+          <div className={style.links_container}>
+            <a className={style.deploy_icon} href={deploy} target="_blank" rel="noreferrer">
               <FaExternalLinkAlt />
             </a>
-            <a href={github} target="_blank" rel="noreferrer">
+            <a className={style.github_icon} href={github} target="_blank" rel="noreferrer">
               <FaGithub />
             </a>
           </div>
