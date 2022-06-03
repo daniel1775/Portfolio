@@ -8,28 +8,21 @@
   font-size: 1rem;
 }
 
+.bg, .button_more{
+  transition: all .4s ease;
+}
+
 .description_container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
   position: absolute;
+  transition: all .4s ease;
   bottom: 0;
   width: 100%;
   padding: 5px;
   height: 85%;
-}
-
-.description_show {
-
-}
-
-.description_hide {
-
-}
-
-.description_hide img{
-  
 }
 
 .developed {
@@ -77,16 +70,40 @@
 }
 
 .button_more {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 42%;
+  left: 42%;
   position: absolute;
   background-color: transparent;
   border: none;
   color: white;
   font-size: 4rem;
   z-index: 10;
+}
+
+/* show description */
+.hide_description .description_container {
+  transform: translateX(-100%);
+}
+
+.hide_description .bg {
+  opacity: 0.7;
+}
+
+.hide_description .button_more {
+  transform: scale(1);
+}
+
+/* show description */
+.show_description .description_container {
+  transform: translateX(0);
+}
+
+.show_description .bg {
+  opacity: 0.2;
+}
+
+.show_description .button_more {
+  transform: scale(0);
 }
 
 @media (min-width:1024px) {

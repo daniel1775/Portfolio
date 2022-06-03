@@ -10,11 +10,14 @@ export default function Card( props ){
   const { image, title, description, tags, github, deploy } = props;
 
   return(
-    <div className={style.card}>
+    <div className={`${style.card} ${showDescription ? style.show_description : style.hide_description}`}>
       <TopBar title={title}/>
-      <img className={style.bg} src={image} alt={title} />
+      <img className={`${style.bg}`} src={image} alt={title} />
       
-      <button className={style.button_more}>
+      <button 
+        className={style.button_more}
+        onClick={ () => setShowDescription( prev => !prev) }
+      >
         <MoreIcon />
       </button>
       
