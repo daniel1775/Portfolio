@@ -11,7 +11,10 @@ export default function Card( props ){
 
   return(
     <div className={`${style.card} ${showDescription ? style.show_description : style.hide_description}`}>
-      <TopBar title={title}/>
+      <TopBar 
+        title={title}
+        animate={showDescription}
+      />
       <img className={`${style.bg}`} src={image} alt={title} />
       
       <button 
