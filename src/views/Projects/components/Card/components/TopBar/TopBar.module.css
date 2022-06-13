@@ -3,14 +3,13 @@
   justify-content: space-between;
   align-items: center;
   background-color: #3E3D3D;
-  height: 15%;
   width: 100%;
   font-size: calc(1rem - 3px);
   font-style: italic;
 }
 
-.TopBar h2 {
-  padding-left: 10px;
+.TopBar h2 {  
+  padding: 10px 0 10px 10px;
 }
 
 .circles_container {
@@ -27,6 +26,10 @@
 }
 
 /* close animation */
+.close_animation .circle {
+  border-radius: 0;
+}
+
 .close_animation .circle_one {
   transform: translateX(75%) rotate(45deg);
   width: 20px;
@@ -40,6 +43,7 @@
 }
 
 .close_animation .circle_two {
-  display: none;
+  position: absolute;
+  transform: scale(0) translateY(-200%);
 }
 
