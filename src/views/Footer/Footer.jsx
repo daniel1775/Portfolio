@@ -9,13 +9,13 @@ export default function Footer() {
 			<div className={style.footer_section}>
 				<div>
 					<a href="https://github.com/daniel1775?tab=repositories" target="_blank" rel="noreferrer">
-            <FaGithub />
-          </a>
+                        <FaGithub />
+                    </a>
 				</div>
 				<div>
 					<a href="https://www.linkedin.com/in/daniel-bustos-nieto-71407619a" target="_blank" rel="noreferrer">
-            <FaLinkedin />
-          </a>
+                        <FaLinkedin />
+                    </a>
 				</div>
 			</div>
 		</footer>

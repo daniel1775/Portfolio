@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #3E3D3D;
+  height: 25px;
   width: 100%;
   font-size: calc(1rem - 3px);
   font-style: italic;
@@ -14,6 +15,10 @@
 
 .circles_container {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
 .circle {

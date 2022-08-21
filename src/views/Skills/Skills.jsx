@@ -11,112 +11,116 @@ import githubIcon from '../../assets/img/github-icon.svg';
 import figmaIcon from '../../assets/img/figma-icon.svg';
 import mongoIcon from '../../assets/img/mongo-icon.svg';
 
-import { HiOutlineChevronRight } from "react-icons/hi";
-import { HiOutlineChevronLeft } from "react-icons/hi";
+import { HiOutlineChevronRight } from 'react-icons/hi';
+import { HiOutlineChevronLeft } from 'react-icons/hi';
 import { useRef } from 'react';
 
-export default function Skills( props ){
-  const { language, darkMode } = props;
-  const slideShow = useRef(null);
-  
-  function previous() {
-    const slideSize = slideShow.current.children[0].offsetWidth;
-    const firstElement = slideShow.current.children[0];
-    const lastElement = slideShow.current.children[slideShow.current.children.length-1];
+export default function Skills(props) {
+	const { language, darkMode } = props;
+	const slideShow = useRef(null);
 
-    slideShow.current.insertBefore(lastElement, firstElement);
-    slideShow.current.style.transition = `none`;
-    slideShow.current.style.transform = `translateX(-${slideSize}px)`;
+	function previous() {
+		const slideSize = slideShow.current.children[0].offsetWidth;
+		const firstElement = slideShow.current.children[0];
+		const lastElement = slideShow.current.children[slideShow.current.children.length - 1];
 
-    setTimeout(() => {
-      slideShow.current.style.transition = `300ms ease-out all`;
-      slideShow.current.style.transform = `translateX(0)`;
-    }, 30);
-  }
-  
-  function next() {
-    const slideSize = slideShow.current.children[0].offsetWidth;
-    const firstElement = slideShow.current.children[0];
-    
-    if(slideShow.current.children.length > 0){
-      slideShow.current.style.transform = `translateX(-${slideSize}px)`;
-      slideShow.current.style.transition = `all .3s ease-in-out`;
-    }
+		slideShow.current.insertBefore(lastElement, firstElement);
+		slideShow.current.style.transition = `none`;
+		slideShow.current.style.transform = `translateX(-${slideSize}px)`;
 
-    function transitionFirstElement(){
-      slideShow.current.style.transition = 'none';
-      slideShow.current.style.transform = `translateX(0)`;
-  
-      slideShow.current.appendChild(firstElement);
-      slideShow.current.removeEventListener('transitionend', transitionFirstElement);
-    }
+		setTimeout(() => {
+			slideShow.current.style.transition = `300ms ease-out all`;
+			slideShow.current.style.transform = `translateX(0)`;
+		}, 30);
+	}
 
-    slideShow.current.addEventListener('transitionend', transitionFirstElement);
-  }
+	function next() {
+		const slideSize = slideShow.current.children[0].offsetWidth;
+		const firstElement = slideShow.current.children[0];
 
-  const data = [
-    {
-      "title": "React JS",
-      "image": reactIcon
-    },
-    {
-      "title": "CSS",
-      "image": cssIcon
-    },
-    {
-      "title": "JavaScript",
-      "image": jsIcon
-    },
-    {
-      "title": "HTML",
-      "image": htmlIcon
-    },
-    {
-      "title": "GIT",
-      "image": gitIcon
-    },
-    {
-      "title": "GitHub",
-      "image": githubIcon
-    },
-    {
-      "title": "Figma",
-      "image": figmaIcon
-    },
-    {
-      "title": "MongoDB",
-      "image": mongoIcon
-    },
-  ];
+		if (slideShow.current.children.length > 0) {
+			slideShow.current.style.transform = `translateX(-${slideSize}px)`;
+			slideShow.current.style.transition = `all .3s ease-in-out`;
+		}
 
-  return(
-    <section className={`${style.skills} ${darkMode ? style.skills_dark : style.skills_light}`}>
-      <h2 className={style.skills_title}>
-        MY SKILLS
-        <hr />
-      </h2>
-      <div className={style.slider_container} ref={slideShow}>
-        {data.map((element, index) => (
-          <Slide 
-            key={index}
-            data={element}
-          /> 
-        ))}
-      </div>
-      <div className={style.panel_arrows}>
-        <button 
-          className={`${style.button} ${style.arrow_left}`}
-          onClick={previous}
-        >
-          <HiOutlineChevronLeft />
-        </button>
-        <button 
-          className={`${style.button} ${style.arrow_left}`}
-          onClick={next}
-        >
-          <HiOutlineChevronRight />
-        </button>
-      </div>
-    </section>
-  );
+		function transitionFirstElement() {
+			slideShow.current.style.transition = 'none';
+			slideShow.current.style.transform = `translateX(0)`;
+
+			slideShow.current.appendChild(firstElement);
+			slideShow.current.removeEventListener(
+				'transitionend',
+				transitionFirstElement
+			);
+		}
+
+		slideShow.current.addEventListener('transitionend', transitionFirstElement);
+	}
+
+	const data = [
+		{
+			title: 'React JS',
+			image: reactIcon,
+		},
+		{
+			title: 'CSS',
+			image: cssIcon,
+		},
+		{
+			title: 'JavaScript',
+			image: jsIcon,
+		},
+		{
+			title: 'HTML',
+			image: htmlIcon,
+		},
+		{
+			title: 'GIT',
+			image: gitIcon,
+		},
+		{
+			title: 'GitHub',
+			image: githubIcon,
+		},
+		{
+			title: 'Figma',
+			image: figmaIcon,
+		},
+		{
+			title: 'MongoDB',
+			image: mongoIcon,
+		},
+	];
+
+	return (
+		<section
+			className={`${style.skills} ${
+				darkMode ? style.skills_dark : style.skills_light
+			}`}
+		>
+			<h2 className={style.skills_title}>
+				MY SKILLS
+				<hr />
+			</h2>
+			<div className={style.slider_container} ref={slideShow}>
+				{data.map((element, index) => (
+					<Slide key={index} data={element} />
+				))}
+			</div>
+			<div className={style.panel_arrows}>
+				<button
+					className={`${style.button} ${style.arrow_left}`}
+					onClick={previous}
+				>
+					<HiOutlineChevronLeft />
+				</button>
+				<button
+					className={`${style.button} ${style.arrow_left}`}
+					onClick={next}
+				>
+					<HiOutlineChevronRight />
+				</button>
+			</div>
+		</section>
+	);
 }

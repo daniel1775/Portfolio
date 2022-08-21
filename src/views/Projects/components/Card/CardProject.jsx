@@ -7,38 +7,48 @@ import TagsTech from './components/DescriptionCard/components/TagsTech/TagsTech'
 import { useState } from 'react';
 import ExternalLinks from './components/DescriptionCard/components/ExternalLinks/ExternalLinks';
 
-export default function Card( props ){
-  const [ showDescription, setShowDescription ] = useState(false);
-  const { image, title, github, deploy, description, tags } = props;
+import { AiOutlinePlusCircle as MoreIcon } from 'react-icons/ai';
+import { useRef } from 'react';
 
-  function handleDescriptionHide() {
-    if(showDescription) {
-      setShowDescription(false);
+export default function Card( props ) {
+    const [ closeButtonMore, setCloseButtonMore ] = useState(false);
+    const [ showDescription, setShowDescription ] = useState(false);
+    const buttonMore = useRef(null);
+
+    const { dataCard, bgImage } = props;
+
+    function onCloseButtonMoreAnimation() {
+        setCloseButtonMore(!closeButtonMore);
+        buttonMore.current.addEventListener('transitionend', () => {
+            setShowDescription(true);
+        });
     }
-  }
 
-  return(
-    <div className={`${style.card}`}>
-      <TopBar
-        title={ title }
-        animate={ showDescription }
-        onHandleDescription={ () => setShowDescription(false) }
-      />
-      <DescriptionCard
-        onHandleDescriptionHide={ handleDescriptionHide }
-        description={ description }
-        image={ image }
-        showDescription={ showDescription }
-        ExternalLinks={
-          <ExternalLinks 
-            deploy={ deploy }
-            github={ github }
-          />}
-        TagsTech={
-          <TagsTech 
-            tags={ tags }
-          />}
-      />
-    </div>
-  );
+    return(
+        <div className={`${style.card}`}>
+            <TopBar />
+            <DescriptionCard
+                description={ dataCard.description }
+                showDescription={ showDescription }
+                bgImage={ bgImage }
+                bgImageTitle = { dataCard.title }
+                ExternalLinks={
+                    <ExternalLinks 
+                        deploy={ dataCard.deploy }
+                        github={ dataCard.github }
+                    />
+                }
+                TagsTech={
+                    <TagsTech tags={ dataCard.tags } />
+                }
+            />
+            <button 
+                className={`${style.button_more} ${closeButtonMore && style.button_more_hide}`} 
+                ref={buttonMore} 
+                onClick={onCloseButtonMoreAnimation}
+            >
+                <MoreIcon />
+            </button>
+        </div>
+    );
 }

@@ -1,73 +1,74 @@
-.contact{
-  color: white;
-  font-size: 1.4rem;
-  background-color: var(--gray);
-  padding-top: 25%;
-  padding-bottom: 15%;
+.contact {
+    color: white;
+    font-size: 1.4rem;
+    background-color: var(--gray);
+    padding-top: 25%;
+    padding-bottom: 15%;
 }
 
-.contact_title{
-  max-width: 80%;
-  text-align: end;
-  margin-left: 5%;
+.contact_title {
+    max-width: 80%;
+    text-align: end;
+    margin-left: 5%;
 }
 
-.image{
-  display: none;
+.image {
+    display: none;
 }
 
-.contact_section{
-  display: flex;
-  flex-direction: column;
-}
-
-.contact_form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact_form input, textarea{
-  width: 70%;
-  height: 15px;
-  margin: 20px;
-  padding: 20px 20px;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  color: black;
-}
-
-.contact_form textarea{
-  height: 150px;
-  font-size: 1.2rem;
-  margin: 20px;
-  padding: 20px;
-  width: 70%;
-}
-
-.form_button{
-  background-color: var(--green);
-  border: none;
-  border-radius: 4px;
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px;
-  font-weight: bold;
-}
-
-@media (min-width:1000px){
-  .contact{
+.contact_section {
     display: flex;
-    justify-content: space-between;
-    padding-top: 10%;
-  }
+    flex-direction: column;
+}
 
-  .contact_section{
-    width: 50%;
-  }
-
-  .image{
+.contact_form {
     display: flex;
-    margin-left: 7%;
-  }
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact_form input,
+textarea {
+    width: 70%;
+    height: 15px;
+    margin: 20px;
+    padding: 20px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.contact_form textarea {
+    height: 150px;
+    font-size: 1.2rem;
+    margin: 20px;
+    padding: 20px;
+    width: 70%;
+}
+
+.form_button {
+    background-color: var(--green);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    font-weight: bold;
+}
+
+@media (min-width:1000px) {
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10%;
+    }
+
+    .contact_section {
+        width: 50%;
+    }
+
+    .image {
+        display: flex;
+        margin-left: 7%;
+    }
 }
