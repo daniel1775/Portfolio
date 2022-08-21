@@ -24,9 +24,17 @@ export default function Card( props ) {
         });
     }
 
+    function onHideDescription() {
+        setShowDescription(false);
+        console.log("gasdsd")
+    }
+
     return(
         <div className={`${style.card}`}>
-            <TopBar />
+            <TopBar 
+                showDescription={ showDescription } 
+                onHideDescription={ onHideDescription }
+            />
             <DescriptionCard
                 description={ dataCard.description }
                 showDescription={ showDescription }

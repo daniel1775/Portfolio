@@ -1,37 +1,80 @@
 .TopBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #3E3D3D;
-  height: 25px;
-  width: 100%;
-  font-size: calc(1rem - 3px);
-  font-style: italic;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #3E3D3D;
+	position: relative;
+	height: 25px;
+	width: 100%;
+	font-size: calc(1rem - 3px);
+	font-style: italic;
 }
 
-.TopBar h2 {  
-  padding: 10px 0 10px 10px;
+.TopBar h2 {
+	padding: 10px 0 10px 10px;
 }
 
 .circles_container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-left: 10px;
+	height: 100%;
+	width: 100%;
 }
 
 .circle {
-  width: 8px;
-  height: 8px;
-  margin-right: 10px;
-  border-radius: 50%;
-  background-color: white;
-  transition: all .4s ease-in;
+	width: 8px;
+	height: 8px;
+	margin: 5px;
+	border-radius: 50%;
+	background-color: white;
+	transition: all .4s ease-in;
 }
 
+.close {
+	height: 30px;
+	width: 30px;
+}
+
+.close {
+	background-color: transparent;
+	border: none;
+	border-radius: 50%;
+	position: absolute;
+	right: -10px;
+	top: -15px;
+	transition: var(--transition);
+	opacity: 0;
+	fill: #fff;
+}
+
+.close_show {
+	opacity: 1;
+	animation-name: closeAnimation;
+	animation-duration: 1s;
+}
+
+.close svg {
+	height: 100%;
+	width: 100%;
+}
+
+@keyframes closeAnimation {
+	from {
+		transform: scale(0);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+
 /* close animation */
-.close_animation .circle {
+/* .close_animation .circle {
   border-radius: 0;
 }
 
@@ -50,5 +93,4 @@
 .close_animation .circle_two {
   position: absolute;
   transform: scale(0) translateY(-200%);
-}
-
+} */
