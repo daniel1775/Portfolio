@@ -1,29 +1,20 @@
 [
-  {
-    "id": 1,
-    "title": "Bioshock landing page",
-    "image": "../../../../assets/img/bioshock.png",
-    "description": "Desgin and development of a landing page about the videogame Bioshock",
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "github": "https://github.com/daniel1775/Bioshock-landing-page",
-    "deploy": "https://daniel1775.github.io/Bioshock-landing-page"
-  },
-  {
-    "id": 2,
-    "title": "Verduras Milena",
-    "image": "../../../../assets/img/bioshock.png",
-    "description": "design and development of a domicile application for a client in Plaza Paloquemao",
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React JS"
-    ],
-    "github": "https://github.com/daniel1775/Verduras-Milena",
-    "deploy": "https://verduras-milena.netlify.app"
-  }
+	{
+		"id": 1,
+		"title": "Bioshock landing page",
+		"image": "../../../../assets/img/bioshock.png",
+		"description": "Desgin and development of a landing page about the videogame Bioshock",
+		"tags": ["HTML", "CSS", "JavaScript"],
+		"github": "https://github.com/daniel1775/Bioshock-landing-page",
+		"deploy": "https://daniel1775.github.io/Bioshock-landing-page"
+	},
+	{
+		"id": 2,
+		"title": "Verduras Milena",
+		"image": "../../../../assets/img/bioshock.png",
+		"description": "design and development of a domicile application for a client in Plaza Paloquemao",
+		"tags": ["HTML", "CSS", "JavaScript", "React JS"],
+		"github": "https://github.com/daniel1775/Verduras-Milena",
+		"deploy": "https://verduras-milena.netlify.app"
+	}
 ]

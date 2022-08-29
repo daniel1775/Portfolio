@@ -15,7 +15,7 @@ export default function TopBar( props ) {
 				<div className={`${style.circle} ${style.circle_three}`} />
 			</div>
 			<div 
-				className={`${style.close} ${showDescription && style.close_show}`}
+				className={`${style.close} ${showDescription ? style.close_show : style.close_hide}`}
 				onClick={onHideDescription}
 			>
 				<IoIosCloseCircle />

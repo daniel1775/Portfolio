@@ -5,28 +5,32 @@ import DescriptionCard from './components/DescriptionCard/DescriptionCard';
 import TagsTech from './components/DescriptionCard/components/TagsTech/TagsTech';
 
 import { useState } from 'react';
-import ExternalLinks from './components/DescriptionCard/components/ExternalLinks/ExternalLinks';
-
-import { AiOutlinePlusCircle as MoreIcon } from 'react-icons/ai';
 import { useRef } from 'react';
 
+import ExternalLinks from './components/DescriptionCard/components/ExternalLinks/ExternalLinks';
+import { AiOutlinePlusCircle as MoreIcon } from 'react-icons/ai';
+
 export default function Card( props ) {
-    const [ closeButtonMore, setCloseButtonMore ] = useState(false);
+    const [ showButtonMore, setShowButtonMore ] = useState(true);
     const [ showDescription, setShowDescription ] = useState(false);
-    const buttonMore = useRef(null);
+    const buttonMoreRef = useRef(null);
 
     const { dataCard, bgImage } = props;
 
     function onCloseButtonMoreAnimation() {
-        setCloseButtonMore(!closeButtonMore);
-        buttonMore.current.addEventListener('transitionend', () => {
+        const onShowDescription = () => {
             setShowDescription(true);
-        });
+            buttonMoreRef.current.removeEventListener('transitionend', onShowDescription);
+        }; 
+        setShowButtonMore(false);
+        buttonMoreRef.current.addEventListener('transitionend', onShowDescription);
     }
 
     function onHideDescription() {
         setShowDescription(false);
-        console.log("gasdsd")
+        setTimeout(() => {
+            setShowButtonMore(true);
+        }, 400);
     }
 
     return(
@@ -51,8 +55,8 @@ export default function Card( props ) {
                 }
             />
             <button 
-                className={`${style.button_more} ${closeButtonMore && style.button_more_hide}`} 
-                ref={buttonMore} 
+                className={`${style.button_more} ${!showButtonMore && style.button_more_hide}`} 
+                ref={buttonMoreRef} 
                 onClick={onCloseButtonMoreAnimation}
             >
                 <MoreIcon />
