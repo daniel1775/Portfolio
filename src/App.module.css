@@ -23,6 +23,7 @@ body {
   --transition: 0.4s all ease;
   --size-title-desktop: calc(2rem + 10px);
   --padding-desktop: 100px;
+  --page-max-width: 1450px;
 }
 
 .section_about_skills {

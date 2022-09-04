@@ -20,3 +20,14 @@
 	font-weight: bolder;
 	border-radius: 10%;
 }
+
+@media (min-width:1024px) {
+	.tags_tech {
+		align-self: flex-end;
+		margin-bottom: 25px;
+	}
+
+	.technologies div {
+		font-size: calc(1rem - 4px);
+	}
+}

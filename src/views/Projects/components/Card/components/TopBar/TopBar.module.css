@@ -85,7 +85,14 @@
 	}
 }
 
-
+@media (min-width:1024px) {
+	.close {
+		right: -14px;
+		top: -19px;
+		height: 40px;
+		width: 40px;
+	}
+}
 /* close animation */
 /* .close_animation .circle {
   border-radius: 0;

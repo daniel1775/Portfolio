@@ -6,7 +6,7 @@ export default function DescriptionCard(props) {
 	return (
 		<div className={`${style.description_card}`}>
 			<div className={`${style.content} ${showDescription && style.content_show}`}>
-				<p>{ description }</p>
+				<p className={style.description_text}>{ description }</p>
 				{ ExternalLinks }
 				{ TagsTech }
 			</div>

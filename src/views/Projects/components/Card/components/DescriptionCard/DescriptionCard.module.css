@@ -1,7 +1,7 @@
 .description_card {
     position: relative;
     overflow: hidden;
-    min-height: 200px;
+    height: 100%;
     width: 100%;
 }
 
@@ -24,7 +24,7 @@
     transform: translateX(0);
 }
 
-.content p:nth-child(1) {
+.description_text {
     grid-row: 1;
     grid-column: 1/3;
     font-weight: 800;
@@ -58,6 +58,16 @@
 
 @media (min-width:1024px) {
     .description_card {
-        height: 100%;
+        height: calc(100% - 25px);
+    }
+
+    .content {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .description_text {
+        margin-left: 25px;
+        font-size: calc(1rem + 2px);
     }
 }

@@ -10,20 +10,22 @@ export default function Projects() {
 	let images = [bioshock, verduras];
 
 	return (
-		<div className={style.projects}>
-			<h2 className={style.projects_title}>
-				PORTFOLIO
-				<hr />
-			</h2>
-			<div className={style.cards}>
-				{data.map( element => (
-					<CardProject
-						key={ element.id }
-						dataCard={ element }
-						bgImage={ images[element.id - 1] }
-					/>
-				))}
+		<section className={style.projects}>
+			<div className={style.projects_container}>
+				<h2 className={style.projects_title}>
+					PORTFOLIO
+					<hr />
+				</h2>
+				<div className={style.cards}>
+					{data.map( element => (
+						<CardProject
+							key={ element.id }
+							dataCard={ element }
+							bgImage={ images[element.id - 1] }
+						/>
+					))}
+				</div>
 			</div>
-		</div>
+		</section>
 	);
 }

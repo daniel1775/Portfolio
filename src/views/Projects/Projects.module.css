@@ -24,14 +24,26 @@
 		padding-top: 5%;
 	}
 
+	.projects_container {
+		margin: auto;
+		max-width: var(--page-max-width);
+	}
+
+	.projects_title {
+		max-width: none;
+		width: 55%;
+		text-align: center;
+		margin: auto;
+		margin-bottom: 90px;
+	}
+
+	.projects_title hr {
+		margin-top: 15px;
+	}
+
 	.cards {
 		justify-content: space-around;
 		margin: auto;
 		width: 100%;
-		max-width: 1500px;
-	}
-
-	.projects_title {
-		max-width: 50%;
 	}
 }
