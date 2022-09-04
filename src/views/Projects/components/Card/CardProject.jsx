@@ -11,11 +11,12 @@ import ExternalLinks from './components/DescriptionCard/components/ExternalLinks
 import { AiOutlinePlusCircle as MoreIcon } from 'react-icons/ai';
 
 export default function Card( props ) {
+    const { dataCard, bgImage, darkMode, language } = props;
+
     const [ showButtonMore, setShowButtonMore ] = useState(true);
     const [ showDescription, setShowDescription ] = useState(false);
     const buttonMoreRef = useRef(null);
 
-    const { dataCard, bgImage } = props;
 
     function onCloseButtonMoreAnimation() {
         const onShowDescription = () => {
@@ -38,6 +39,8 @@ export default function Card( props ) {
             <TopBar 
                 showDescription={ showDescription } 
                 onHideDescription={ onHideDescription }
+                darkMode={ darkMode }
+                language={ language }
             />
             <DescriptionCard
                 description={ dataCard.description }

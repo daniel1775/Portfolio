@@ -1,10 +1,20 @@
 .projects {
 	display: flex;
 	flex-direction: column;
-	color: white;
-	background-color: var(--gray);
 	font-size: 1.4rem;
-	padding-top: 20%;
+	padding: 20% 0;
+	transition: var(--transition);
+	overflow-y: hidden;
+}
+
+.projects_dark {
+	background-color: var(--gray);
+	color: white;
+}
+
+.projects_light {
+	background-color: var(--gray-light);
+	color: var(--black-font);
 }
 
 .projects_title {

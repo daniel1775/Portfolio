@@ -93,11 +93,7 @@ export default function Skills(props) {
 	];
 
 	return (
-		<section
-			className={`${style.skills} ${
-				darkMode ? style.skills_dark : style.skills_light
-			}`}
-		>
+		<section className={`${style.skills} ${darkMode ? style.skills_dark : style.skills_light}`}>
 			<h2 className={style.skills_title}>
 				MY SKILLS
 				<hr />

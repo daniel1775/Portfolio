@@ -3,10 +3,10 @@ import style from './TopBar.module.css';
 import { IoIosCloseCircle } from "react-icons/io";
 
 export default function TopBar( props ) {
-	const { showDescription, onHideDescription } = props;
+	const { showDescription, onHideDescription, darkMode, language } = props;
 
 	return (
-		<div className={style.TopBar}>
+		<div className={`${style.TopBar}`}>
 			<div 
 				className={`${style.circles_container}`}
 			>
@@ -15,7 +15,7 @@ export default function TopBar( props ) {
 				<div className={`${style.circle} ${style.circle_three}`} />
 			</div>
 			<div 
-				className={`${style.close} ${showDescription ? style.close_show : style.close_hide}`}
+				className={`${style.close} ${showDescription ? style.close_show : style.close_hide} ${darkMode ? style.close_dark : style.close_light}`}
 				onClick={onHideDescription}
 			>
 				<IoIosCloseCircle />

@@ -29,12 +29,24 @@ function App() {
 					/>
 				}
 			/>
-			<Header language={language} darkMode={darkMode} />
+			<Header 
+				language={language} 
+				darkMode={darkMode} 
+			/>
 			<div className={`${style.section_about_skills} ${darkMode ? style.section_dark : style.section_light}`}>
-				<Skills language={language} darkMode={darkMode} />
-				<About language={language} darkMode={darkMode} />
+				<Skills 
+					language={language} 
+					darkMode={darkMode}
+				/>
+				<About 
+					language={language} 
+					darkMode={darkMode}	
+				/>
 			</div>
-			<Projects />
+			<Projects 
+				language={language}
+				darkMode={darkMode}
+			/>
 			<Contact />
 			<Footer />
 		</div>
