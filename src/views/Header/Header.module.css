@@ -1,10 +1,23 @@
 .header {
 	position: relative;
 	transition: var(--transition);
+	z-index: -1;
 }
 
 .header::before {
 	transition: var(--transition);
+}
+
+.header_black {
+	background-color: black;
+}
+
+.header_light {
+	background-color: var(--gray-white);
+	background-image: url('../../assets/img/forest.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .header_black::before, .header_light::before {
@@ -15,17 +28,17 @@
 }
 
 .header_black::before {
-	border-top: 50vh solid var(--gray);
-	border-left: 50vw solid var(--gray);
-	border-right: 50vw solid black;
-	border-bottom: 50vh solid black;
+	border-top: 12vw solid var(--gray);
+	border-left: 46vw solid var(--gray);
+	border-right: 21vw solid transparent;
+	border-bottom: 26vw solid transparent;
 }
 
 .header_light::before {
-	border-top: 50vh solid var(--gray-light);
-	border-left: 50vw solid var(--gray-light);
-	border-right: 50vw solid var(--gray-white);
-	border-bottom: 50vh solid var(--gray-white);
+	border-top: 12vw solid var(--gray-light);
+	border-left: 46vw solid var(--gray-light);
+	border-right: 21vw solid transparent;
+	border-bottom: 26vw solid transparent;
 }
 
 .header_container {
@@ -35,6 +48,7 @@
 	height: 100vh;
 	flex-wrap: wrap;
 	color: white;
+	z-index: 5;
 }
 
 .titles {
