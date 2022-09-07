@@ -21,7 +21,7 @@ body {
     --gray-white: #EBEBEB;
     --black-font: #1F1F1F;
     --transition: 0.4s all ease;
-    --size-title-desktop: calc(2rem + 10px);
+    --size-title-desktop: 2rem;
     --padding-desktop: 100px;
     --page-max-width: 1450px;
 }

@@ -14,10 +14,6 @@
 
 .header_light {
 	background-color: var(--gray-white);
-	background-image: url('../../assets/img/forest.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: bottom;
 }
 
 .header_black::before, .header_light::before {

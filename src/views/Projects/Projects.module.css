@@ -31,7 +31,7 @@
 
 @media (min-width:1024px) {
 	.projects {
-		padding-top: 5%;
+		padding: 5% 0;
 	}
 
 	.projects_container {
@@ -41,6 +41,7 @@
 
 	.projects_title {
 		max-width: none;
+		font-size: var(--size-title-desktop);
 		width: 55%;
 		text-align: center;
 		margin: auto;

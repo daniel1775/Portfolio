@@ -2,10 +2,11 @@ import style from './Contact.module.css';
 
 import plane from '../../assets/img/plane-icon.svg';
 
-export default function Contact() {
+export default function Contact( props ) {
+	const { language, darkMode } = props;
 
 	return (
-		<div className={style.contact}>
+		<section className={`${style.contact} ${darkMode ? style.contact_dark : style.contact_light}`}>
 			<img className={style.image} src={plane} alt="" />
 			<div className={style.contact_section}>
 				<h2 className={style.contact_title}>
@@ -26,9 +27,11 @@ export default function Contact() {
 						placeholder="Message"
 						autoComplete="off"
 					/>
-					<button className={style.form_button}>Send</button>
+					<div className={style.form_button_container}>
+						<button className={style.form_button}>Send</button>
+					</div>
 				</form>
 			</div>
-		</div>
+		</section>
 	);
 }

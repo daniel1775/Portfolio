@@ -47,8 +47,14 @@ function App() {
 				language={language}
 				darkMode={darkMode}
 			/>
-			<Contact />
-			<Footer />
+			<Contact 
+				language={language}
+				darkMode={darkMode}
+			/>
+			<Footer 
+				language={language}
+				darkMode={darkMode}
+			/>
 		</div>
 	);
 }
