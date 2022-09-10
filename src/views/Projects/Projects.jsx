@@ -6,7 +6,7 @@ import style from './Projects.module.css';
 import bioshock from '../../assets/img/bioshock.png';
 import verduras from '../../assets/img/verduras.PNG';
 
-export default function Projects( props ) {
+export default function Projects(props) {
 	const { darkMode, language } = props;
 	let images = [bioshock, verduras];
 

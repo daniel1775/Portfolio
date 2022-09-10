@@ -20,7 +20,7 @@ export default function Navbar(props) {
 					alt=""
 				/>
 				<div className={style.nav_menu__mode}>
-					{mode}
+					{ mode }
 					<div
 						className={`${style.icon_hiBars} ${
 							darkMode ? style.hiBars_light : style.hiBars_dark

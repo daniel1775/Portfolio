@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import GlobalContext from './context/GlobalContext';
+
 import style from './App.module.css';
 
 import Navbar from './views/Navbar/Navbar';
@@ -17,45 +19,47 @@ function App() {
 	const [darkMode, setDarkMode] = useState(true);
 
 	return (
-		<div className={style.App}>
-			<Navbar
-				darkMode={darkMode}
-				mode={
-					<Mode
-						language={language}
-						setLanguage={setLanguage}
-						darkMode={darkMode}
-						setDarkMode={setDarkMode}
-					/>
-				}
-			/>
-			<Header 
-				language={language} 
-				darkMode={darkMode} 
-			/>
-			<div className={`${style.section_about_skills} ${darkMode ? style.section_dark : style.section_light}`}>
-				<Skills 
+		<GlobalContext.Provider value={{ language, darkMode, setLanguage, setDarkMode }}>
+			<div className={style.App}>
+				<Navbar
+					darkMode={darkMode}
+					mode={
+						<Mode 
+							language={language}
+							setLanguage={setLanguage}
+							darkMode={darkMode}
+							setDarkMode={setDarkMode}
+						/>
+					}
+				/>
+				<Header 
 					language={language} 
+					darkMode={darkMode} 
+				/>
+				<div className={`${style.section_about_skills} ${darkMode ? style.section_dark : style.section_light}`}>
+					<Skills 
+						language={language} 
+						darkMode={darkMode}	
+					/>
+					<About 
+						language={language} 
+						darkMode={darkMode}	
+					/>
+				</div>
+				<Projects 
+					language={language}
 					darkMode={darkMode}
 				/>
-				<About 
-					language={language} 
-					darkMode={darkMode}	
+				<Contact 
+					language={language}
+					darkMode={darkMode}
+				/>
+				<Footer 
+					language={language}
+					darkMode={darkMode}
 				/>
 			</div>
-			<Projects 
-				language={language}
-				darkMode={darkMode}
-			/>
-			<Contact 
-				language={language}
-				darkMode={darkMode}
-			/>
-			<Footer 
-				language={language}
-				darkMode={darkMode}
-			/>
-		</div>
+		</GlobalContext.Provider>
 	);
 }
 

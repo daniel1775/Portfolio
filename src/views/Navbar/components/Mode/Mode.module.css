@@ -1,58 +1,63 @@
-.mode{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.button_mode{
-  margin-right: 15px;
-  margin-top: 6px;
+.button_mode {
+    margin-right: 15px;
+    margin-top: 6px;
 }
 
-.button_language{
-  margin-left: 15px;
+.button_language {
+    margin-left: 15px;
 }
 
-.icons_line{
-  font-size: 2.5rem;
+.icons_line {
+    font-size: 2.5rem;
 }
 
-.button_mode, .button_language{
-  background-color: transparent;
-  border: none;
+.button_mode,
+.button_language {
+    background-color: transparent;
+    border: none;
 }
 
-.button_language{
-  font-size: 1.5rem;
-}
-
-.button_mode{
-  font-size: 1.8rem;
-}
-
-.icons_hiSun, .light_mode, .line_light{
-  transition: var(--transition);
-  color: white;
-}
-
-.icons_hiMoon, .dark_mode, .line_dark{
-  transition: var(--transition);
-  color: var(--black-font);
-}
-
-@media (min-width:1024px){
-  .icons_line{
-    font-size: 2rem;
-    margin-bottom: 5px;
-  }
-  
-  .button_language{
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .button_mode{
+.button_language {
     font-size: 1.5rem;
-    cursor: pointer;
-  }
+}
+
+.button_mode {
+    font-size: 1.8rem;
+}
+
+.icons_hiSun,
+.light_mode,
+.line_light {
+    transition: var(--transition);
+    color: white;
+}
+
+.icons_hiMoon,
+.dark_mode,
+.line_dark {
+    transition: var(--transition);
+    color: var(--black-font);
+}
+
+@media (min-width:1024px) {
+    .icons_line {
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    .button_language {
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .button_mode {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 }

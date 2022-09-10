@@ -13,6 +13,7 @@ import mongoIcon from '../../assets/img/mongo-icon.svg';
 
 import { HiOutlineChevronRight } from 'react-icons/hi';
 import { HiOutlineChevronLeft } from 'react-icons/hi';
+
 import { useRef } from 'react';
 
 export default function Skills(props) {
