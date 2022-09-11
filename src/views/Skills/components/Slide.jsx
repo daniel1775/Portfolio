@@ -5,7 +5,7 @@ export default function Slide( props ) {
 
 	return (
 		<div className={style.slide}>
-			<img className={style.image} src={ data.image } alt="slide image" />
+			<img className={style.image} src={ data.image } alt="slide" />
 			<div className={style.title}>
 				<p>{ data.title }</p>
 			</div>

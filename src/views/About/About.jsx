@@ -1,7 +1,7 @@
 import style from './About.module.css';
 
 export default function About(props) {
-	const { darkMode, language} = props;
+	const { darkMode } = props;
 
 	return (
 		<section className={`${style.about} ${darkMode ? style.about_dark : style.about_light}`}>

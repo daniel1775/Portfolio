@@ -17,7 +17,7 @@ import { HiOutlineChevronLeft } from 'react-icons/hi';
 import { useRef } from 'react';
 
 export default function Skills(props) {
-	const { language, darkMode } = props;
+	const { darkMode } = props;
 	const slideShow = useRef(null);
 
 	function previous() {

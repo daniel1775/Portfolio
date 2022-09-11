@@ -7,7 +7,7 @@ import style from './Navbar.module.css';
 
 export default function Navbar(props) {
 	const { mode, darkMode } = props;
-	const [showMenu, setShowMenu] = useState(false);
+	const [ showMenu, setShowMenu ] = useState(false);
 
 	return (
 		<nav

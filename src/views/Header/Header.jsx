@@ -2,7 +2,7 @@ import style from './Header.module.css';
 import pc from '../../assets/img/pc.svg';
 
 export default function Header(props) {
-	const { language, darkMode } = props;
+	const { darkMode } = props;
 
 	return (
 		<header className={`${style.header} ${darkMode ? style.header_black : style.header_light}`}>

@@ -3,7 +3,7 @@ import style from './Contact.module.css';
 import plane from '../../assets/img/plane-icon.svg';
 
 export default function Contact( props ) {
-	const { language, darkMode } = props;
+	const { darkMode } = props;
 
 	return (
 		<section className={`${style.contact} ${darkMode ? style.contact_dark : style.contact_light}`}>

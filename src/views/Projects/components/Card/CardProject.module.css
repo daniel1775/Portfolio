@@ -37,15 +37,6 @@
         width: 40%;
     }
 
-    .card::before {
-        /* content: '';
-        position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 999; */
-    }
-
     .button_more {
         bottom: 0;
         top: 0;
