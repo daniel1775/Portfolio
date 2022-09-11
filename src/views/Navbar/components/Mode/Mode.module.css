@@ -60,7 +60,7 @@
     }
 
     .button_language::before {
-        content: '';
+        /* content: ''; */
         background-color: red;
         border-radius: 50%;
         position: absolute;
