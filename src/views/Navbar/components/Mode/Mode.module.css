@@ -52,12 +52,35 @@
     }
 
     .button_language {
-        font-size: 1rem;
         cursor: pointer;
+        padding: 5px;
+        border-radius: 50%;
+        font-size: 1.3rem;
+        position: relative;
+    }
+
+    .button_language::before {
+        content: '';
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
     }
 
     .button_mode {
         font-size: 1.5rem;
         cursor: pointer;
+    }
+
+    .icons_hiSun, .icons_hiMoon {
+        transform: rotate(0) scale(1);
+        transition: all .4s ease;
+    }
+    
+    .icons_hiSun:hover, .icons_hiMoon:hover {
+        transform: rotate(360deg) scale(1.4);
     }
 }

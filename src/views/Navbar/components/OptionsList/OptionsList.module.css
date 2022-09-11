@@ -33,7 +33,6 @@
 }
 
 .options_list li {
-    font-size: calc(100% + 4px);
     list-style: none;
 }
 
@@ -90,5 +89,9 @@
 
     .options_list_show {
         transform: none;
+    }
+
+    .options_list_light li::before {
+        background-color: black;
     }
 }
