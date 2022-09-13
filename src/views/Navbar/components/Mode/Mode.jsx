@@ -33,7 +33,7 @@ export default function Mode(props) {
 				onClick={() => setLanguage(!language)}
 			>
 				<svg width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="none">
-					<circle class="js-circle circle" cx="50" cy="50" r="48" stroke="white" stroke-width="3" fill="none"  />
+					<circle className="js-circle circle" cx="50" cy="50" r="48" stroke="white" strokeWidth="3" fill="none"  />
 				</svg>
 				{language ? 'ES' : 'EN'}
 			</button>

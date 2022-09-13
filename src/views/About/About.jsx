@@ -1,5 +1,7 @@
 import style from './About.module.css';
 
+import Button from '../../components/Button/Button';
+
 export default function About(props) {
 	const { darkMode } = props;
 
@@ -15,14 +17,11 @@ export default function About(props) {
 				UX design. I try to stay at the frontend of technology, learn new
 				technologies to implement in my work.
 			</p>
-			<button className={style.about_button} >
-				<a 
-					href="https://drive.google.com/drive/u/0/folders/1D2DRSU7k7C7e6YCPQEovC0O-G0Ba3hg4"
-					target="_blank" rel="noreferrer"
-				>
+			<div className={style.about_button}>
+				<Button>
 					Download CV
-				</a>
-			</button>
+				</Button>
+			</div>
 		</section>
 	);
 }

@@ -13,7 +13,7 @@ export default function Header(props) {
 					<h2>Frontend Developer</h2>
 				</div>
 				<div className={style.image}>
-					<img src={pc} alt="" />
+					<img src={pc} alt="laptop" />
 				</div>
 			</div>
 		</header>

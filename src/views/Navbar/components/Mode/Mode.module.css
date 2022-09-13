@@ -30,6 +30,11 @@
 
 .button_mode {
     font-size: 1.8rem;
+    transition: all .4s ease;
+}
+
+.button_mode:active svg {
+    transform: rotate(360deg);
 }
 
 .icons_hiSun,
@@ -48,12 +53,6 @@
 
 .icons_hiMoon, .icons_hiSun {
     transition: all .4s ease;
-}
-
-
-/* Effect click pending */
-.icons_hiMoon:target, .icons_hiSun:target {
-    transform: rotate(300deg);
 }
 
 @media (min-width:1024px) {
@@ -87,7 +86,7 @@
         transition: all .4s linear;
     }
 
-    .button_language:hover svg circle{
+    .button_language:hover svg circle {
         stroke-dashoffset: 0;
     }
 

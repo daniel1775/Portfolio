@@ -37,19 +37,12 @@
 }
 
 .about_button {
-    width: 50%;
-    border-radius: 3px;
-    background-color: var(--green);
-    margin: 50px 0 0 10px;
-    padding: 7px 0 7px 0;
-    font-weight: 300;
-    border: none;
-    font-size: calc(1rem + 4px);
+    box-sizing: content-box;
+    min-height: 30px;
 }
 
 .about_button a {
-    color: white;
-    text-decoration: none;
+    background-color: var(--green);
 }
 
 @media (min-width: 1024px) {
@@ -69,11 +62,6 @@
         line-height: 1.4;
         font-size: calc(1rem + 10px);
         width: 90%;
-    }
-
-    .about_button {
-        width: auto;
-        padding: 12px 20px;
     }
 }
 
