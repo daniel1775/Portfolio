@@ -39,10 +39,7 @@
 .about_button {
     box-sizing: content-box;
     min-height: 30px;
-}
-
-.about_button a {
-    background-color: var(--green);
+    margin-top: 30px;
 }
 
 @media (min-width: 1024px) {

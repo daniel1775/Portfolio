@@ -18,7 +18,7 @@ export default function About(props) {
 				technologies to implement in my work.
 			</p>
 			<div className={style.about_button}>
-				<Button>
+				<Button link={'https://drive.google.com/drive/u/0/folders/1D2DRSU7k7C7e6YCPQEovC0O-G0Ba3hg4'}>
 					Download CV
 				</Button>
 			</div>

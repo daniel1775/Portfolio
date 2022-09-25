@@ -1,6 +1,9 @@
 .button {
     border-radius: 3px;
-    padding: 7px 15px;
+    background-color: var(--green);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
     font-weight: 300;
     border: none;
     font-size: calc(1rem + 4px);
@@ -8,6 +11,52 @@
 
 @media (min-width: 1024px) {
     .button {
-        border: 1px solid;
+        border: 1px solid var(--green);
+        background-color: transparent;
+        position: relative;
+        cursor: pointer;
+        transition: all .4s ease;
+        z-index: 1;
+    }
+
+    .button::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: transform .4s ease;
+        transform: scaleX(0);
+        transform-origin: right;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .button_light_mode::before, .button_dark_mode::before {
+        background-color: var(--gray-white);
+    }
+
+    .button::after {
+        content: '';
+        background-color: var(--green);
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+    }
+
+    .button_light_mode:hover {
+        color: var(--green);
+    }
+
+    .button_dark_mode:hover {
+        color: #000;
+    }
+
+    .button:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 }
