@@ -44,12 +44,16 @@ body {
     .section_about_skills {
         padding: 60px 0 130px 0;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
     }
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+    .section_about_skills {
+        justify-content: flex-end;
+    }
+}
 
 /* .App {
   text-align: center;

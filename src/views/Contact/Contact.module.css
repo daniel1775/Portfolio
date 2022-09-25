@@ -54,16 +54,8 @@
     outline: solid 2px #165520;
 }
 
-.form_button {
-    background-color: var(--green);
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-size: calc(1rem + 7px);
-    padding: 10px 30px;
-    margin-top: 20px;
-    margin-left: 20px;
-    font-weight: normal;
+.form_button_container {
+    margin-top: 25px;
 }
 
 @media (min-width:1000px) {

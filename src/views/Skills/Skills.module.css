@@ -58,10 +58,9 @@
 
 @media (min-width:1024px) {
 	.skills {
-		margin: 20px 0 0 0;
+		margin: 20px 0 0 7%;
 		width: 25%;
 		padding: 0;
-		margin-left: calc(var(--padding-desktop) + 100px);
 		height: 100%;
 	}
 
@@ -76,4 +75,11 @@
 	.button {
 		cursor: pointer;
 	}
+}
+
+@media (min-width: 1440px) {
+    .skills {
+        margin-left: 0;
+		margin-right: 5%;
+    }
 }
