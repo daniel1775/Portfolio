@@ -14,13 +14,13 @@ export default function OptionsList(props) {
                 </a>
             </li>
             <li>
-                <a href="#skills">
-                    SKILLS
+                <a href="#projects">
+                    PORTFOLIO
                 </a>
             </li>
             <li>
-                <a href="#portfolio">
-                    PORTFOLIO
+                <a href="#contact">
+                    CONTACT
                 </a>
             </li>
         </ul>

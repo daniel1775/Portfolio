@@ -11,7 +11,7 @@ export default function Contact( props ) {
 	const [ message, setMessage ] = useState("");
 
 	return (
-		<section className={`${style.contact} ${darkMode ? style.contact_dark : style.contact_light}`}>
+		<section id='contact' className={`${style.contact} ${darkMode ? style.contact_dark : style.contact_light}`}>
 			<img className={style.image} src={plane} alt="" />
 			<div className={style.contact_section}>
 				<h2 className={style.contact_title}>

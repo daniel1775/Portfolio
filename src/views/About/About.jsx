@@ -1,12 +1,22 @@
 import style from './About.module.css';
 
 import Button from '../../components/Button/Button';
+import { useRef } from 'react';
 
 export default function About(props) {
 	const { darkMode } = props;
+	const aboutSection = useRef(null);
+
+	const animateFade = () => {
+		
+	}
 
 	return (
-		<section className={`${style.about} ${darkMode ? style.about_dark : style.about_light}`}>
+		<section 
+			id='about' 
+			className={`${style.about} ${darkMode ? style.about_dark : style.about_light}`}
+			ref={aboutSection}
+		>
 			<h2 className={style.about_title}>
 				ABOUT ME
 				<hr />

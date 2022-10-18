@@ -11,7 +11,7 @@ export default function Projects(props) {
 	let images = [bioshock, verduras];
 
 	return (
-		<section className={`${style.projects} ${darkMode ? style.projects_dark : style.projects_light}`}>
+		<section id='projects' className={`${style.projects} ${darkMode ? style.projects_dark : style.projects_light}`}>
 			<div className={style.projects_container}>
 				<h2 className={style.projects_title}>
 					PORTFOLIO

@@ -16,10 +16,6 @@
     color: white;
 }
 
-.contact_section {
-    margin-left: 6%;
-}
-
 .contact_title {
     max-width: 80%;
     text-align: start;
@@ -61,16 +57,15 @@
 @media (min-width:1000px) {
     .contact {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         padding-top: 10%;
     }
 
     .contact_section {
-        width: 50%;
+        width: 35%;
     }
 
     .image {
         display: flex;
-        margin-left: 7%;
     }
 }
