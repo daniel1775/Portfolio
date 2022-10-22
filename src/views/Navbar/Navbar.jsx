@@ -8,13 +8,11 @@ import style from './Navbar.module.css';
 import OptionsList from './components/OptionsList/OptionsList';
 
 export default function Navbar(props) {
-	const { mode, darkMode } = props;
+	const { mode, darkMode, language } = props;
 	const [ showMenu, setShowMenu ] = useState(false);
 
 	return (
-		<nav
-			className={`${style.container} ${darkMode ? style.container_dark : style.container_light}`}
-		>
+		<nav className={`${style.container} ${darkMode ? style.container_dark : style.container_light}`}>
 			<div className={style.nav}>
 				<img
 					className={style.logo}
@@ -34,6 +32,7 @@ export default function Navbar(props) {
 			</div>
 			<OptionsList 
 				darkMode={darkMode}
+				language={language}
 				showMenu={showMenu}
 			/>
 			<div className={style.icons_mode}>
