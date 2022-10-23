@@ -1,7 +1,7 @@
 import style from './OptionsList.module.css';
 
 export default function OptionsList(props) {
-    const { darkMode, showMenu } = props;
+    const { darkMode, language, showMenu } = props;
     
     return(
         <ul className={`${style.options_list} 
@@ -10,17 +10,17 @@ export default function OptionsList(props) {
         >
             <li>
                 <a className="nav__active" href="#about">
-                    ABOUT
+                    {language ? 'SOBRE MI' : 'ABOUT ME'}
                 </a>
             </li>
             <li>
-                <a href="#projects">
-                    PORTFOLIO
+                <a href="#skills">
+                    {language ? 'HABILIDADES' : 'SKILLS'}
                 </a>
             </li>
             <li>
-                <a href="#contact">
-                    CONTACT
+                <a href="#portfolio">
+                    {language ? 'PORTAFOLIO' : 'PORTFOLIO'}
                 </a>
             </li>
         </ul>

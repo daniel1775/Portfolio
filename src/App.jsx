@@ -23,6 +23,7 @@ function App() {
 			<div className={style.App}>
 				<Navbar
 					darkMode={darkMode}
+					language={language}
 					mode={
 						<Mode 
 							language={language}
@@ -30,6 +31,7 @@ function App() {
 							darkMode={darkMode}
 							setDarkMode={setDarkMode}
 						/>
+						
 					}
 				/>
 				<Header 
